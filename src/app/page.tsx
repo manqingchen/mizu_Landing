@@ -22,7 +22,6 @@ import p9 from "@/assets/partners/2.svg";
 import p10 from "@/assets/partners/3.svg";
 import p11 from "@/assets/partners/4.svg";
 export default function Home() {
- 
   return (
     <main className="flex w-full h-screen flex-col items-center justify-start overflow-y-auto">
       {/* header */}
@@ -48,7 +47,7 @@ export default function Home() {
         </div>
       </header>
       {/* section */}
-      <section className="bg-black flex flex-1 justify-between md:items-center w-full h-full md:pl-[130px] md:pr-[160px] pb-[10%] px-[32px] md:mt-0 flex-col">
+      <section className="bg-black flex flex-1 justify-between md:items-center w-full md:pl-[130px] md:pr-[160px] pb-[10%] px-[32px] md:mt-0 flex-col">
         <article className="flex md:flex-row flex-col-reverse md:mt-[60px]">
           <div className="flex flex-col items-center md:items-start w-[100%]">
             <span className="block text-white font-medium md:text-7xl md:leading-[67px] text-[32px] text-left w-[100%]">
@@ -66,13 +65,13 @@ export default function Home() {
             <Image alt="logo" src={h} className="h-[300px]" />
           </div>
         </article>
-        <div className="mt-[40px]">
-          <h2 className="text-[30px] text-center my-[20px]">
+        <div>
+          <h2 className="text-[40px] text-center my-[40px]">
             Why do we need the Mizu synthetic AI data networks ?
           </h2>
-          <div className="grid grid-cols-3 gap-10">
-            <div className="flex flex-col flex-1 gap-3">
-              <span className="text-[24px] mb-[8px] text-[rgb(24, 32, 38)]">
+          <div className="md:grid md:grid-cols-3 md:gap-10 flex flex-col">
+            <div className="flex flex-col md:flex-1 gap-3 mb-[30px] md:mb-0">
+              <span className="text-[24px] md:mb-[8px] text-[rgb(24, 32, 38)] font-bold text-left">
                 Data is the ultimate bottleneck for AI,Synthetic Data is the
                 future
               </span>
@@ -88,8 +87,8 @@ export default function Home() {
               </span>
             </div>
 
-            <div className="flex flex-col flex-1 gap-3">
-              <span className="text-[24px] mb-[8px] text-[rgb(24, 32, 38)]">
+            <div className="flex flex-col md:flex-1 gap-3 mb-[30px] md:mb-0">
+              <span className="text-[24px] mb-[8px] text-[rgb(24, 32, 38)] font-bold text-left">
                 The first decentralized GenAI-driven synthetic data network
               </span>
               <span className="text-[#ccc] text-[20px]">
@@ -109,8 +108,8 @@ export default function Home() {
               </span>
             </div>
 
-            <div className="flex flex-col flex-1 gap-3">
-              <span className="text-[24px] mb-[8px] text-[rgb(24, 32, 38)]">
+            <div className="flex flex-col md:flex-1 gap-3 mb-[30px] md:mb-0">
+              <span className="text-[24px] mb-[8px] text-[rgb(24, 32, 38)] font-bold text-left">
                 Scalable, trackable & verifiable data processing
               </span>
               <span className="text-[#ccc] text-[20px]">
@@ -129,13 +128,13 @@ export default function Home() {
         </div>
 
         {/* partners */}
-        <div className="flex flex-row w-[100vw] h-[188px] px-8 py-12">
+        <div className="flex flex-row items-center w-[100%] h-[188px] overflow-y-scroll">
           {[p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11].map((i, idx) => (
             <Image
               src={i}
               key={idx}
               alt="partners"
-              className="w-[128px] mr-8"
+              className="w-[188px] mr-8 h-[128px]"
             />
           ))}
         </div>
@@ -145,7 +144,7 @@ export default function Home() {
           <h3 className="text-[30px] text-center mb-[20px]">
             Technical founders that previously built infra serving 2B people
           </h3>
-          <div className="grid grid-cols-5 gap-10">
+          <div className="md:grid md:grid-cols-4 md:gap-10 flex flex-col">
             <div className="flex flex-col items-center">
               <Image alt="logo" src={Shu} className="h-[200px]" />
               <span>Shu</span>
@@ -171,40 +170,44 @@ export default function Home() {
               <span>Sam</span>
               <span className="text-[#1CBD3F]">Cryptographer</span>
             </div>
+          </div>
 
-            {/* advisor */}
-            <div className="w-full pt-8">
-              <div className="grid grid-row-4 gap-5">
-                <div className="flex flex-row items-center">
-                  <Image alt="logo" src={Sandeep} className="h-[60px]" />
-                  <div>
-                    <span>Sandeep</span>
-                  </div>
+          {/* advisor */}
+          <div className="w-full pt-8">
+            <div className="md:grid grid-cols-8 gap-5 flex flex-wrap flex-row">
+              <div className="hidden md:block"></div>
+              <div className="hidden md:block"></div>
+              <div className="hidden md:block"></div>
+              <div className="hidden md:block"></div>
+              <div className="flex flex-row items-center w-[45%]">
+                <Image alt="logo" src={Sandeep} className="h-[60px]" />
+                <div>
+                  <span>Sandeep</span>
                 </div>
-                <div className="flex flex-row items-center">
-                  <Image alt="logo" src={Will} className="h-[60px]" />
-                  <div>
-                    <span>Will</span>
-                  </div>
+              </div>
+              <div className="flex flex-row items-center w-[45%]">
+                <Image alt="logo" src={Will} className="h-[60px]" />
+                <div>
+                  <span>Will</span>
                 </div>
-                <div className="flex flex-row items-center">
-                  <Image alt="logo" src={Michael} className="h-[60px]" />
-                  <div>
-                    <span>Michael</span>
-                  </div>
+              </div>
+              <div className="flex flex-row items-center w-[45%]">
+                <Image alt="logo" src={Michael} className="h-[60px]" />
+                <div>
+                  <span>Michael</span>
                 </div>
-                <div className="flex flex-row items-center">
-                  <Image alt="logo" src={Yuze} className="h-[60px]" />
-                  <div>
-                    <span>Yuze</span>
-                  </div>
+              </div>
+              <div className="flex flex-row items-center w-[45%]">
+                <Image alt="logo" src={Yuze} className="h-[60px]" />
+                <div>
+                  <span>Yuze</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-row justify-between pt-[24px] pb-[70px] w-full">
+        <div className="flex flex-row justify-between pt-[24px] pb-[70px] w-full mt-[40px]">
           <p className="text-base text-[#777E90]">
             @2023 Mizu. All rights reserved
           </p>
